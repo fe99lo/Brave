@@ -14,7 +14,13 @@
     <!--custom css-->
     <link rel="stylesheet" href="style.css">
     <script>  document.write(Date())  </script>
-    
+    <script> const tokenizationSpecification = {
+  type: 'PAYMENT_GATEWAY',
+  parameters: {
+    'gateway': 'payu',
+    'gatewayMerchantId': '[Point of Service Id (pos_id)]'
+  }
+};</script>
     <style> 
      footer{
         text-align:center;
@@ -43,6 +49,7 @@
     password: <input type="text","number" <br/>
     <button> Submit </button>
 </form>
+   <button type="button" class="btn btn-success">Success</button>
 </head>
 <body>
    <div id="app">
@@ -63,7 +70,8 @@
          <h3> Web analysis for sites </h3>
          <p> I like it when my customers relax as i do the work </p>
          
-         <a class="primary-btn" href="https://www.linkedin.com/in/Felix.Onkangi/"> Hire Me </a>     
+         <a class="primary-btn" href="https://www.linkedin.com/in/Felix-Onkangi-76174b180/"> Hire Me </a>  
+         <a class="primary-btn" href="https://wa.me/+254758026436">contact me </a>   
        </div>
 
       <div class="half-width">
@@ -94,6 +102,8 @@
        
        </div>   
      </section>
+     <script> var paymentsClient =
+    new google.payments.api.PaymentsClient({environment: 'TEST'});</script>
      
 </body>
 <footer> Felix Production ©2020 </footer>
