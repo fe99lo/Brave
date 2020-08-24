@@ -7,27 +7,64 @@
     <meta name="author" content="Felix Onkangi">
     <meta name="description" content="portfolio website">
     <meta name="keywords" content="programming hero, web playground">
-    <link rel="shortcut icon" href="images/relax.png" type="image/image png">
+    <link rel="relax icon" href="images/relax.png" type="image/image png">
     <!--@bootstrapCss-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!--custom css-->
     <link rel="stylesheet" href="style.css">
+    <link rel="PHP" href="index.php">
     <script>  document.write(Date())  </script>
+    
+    <script>
+         function showRSS(str) {
+            if (str.length == 0) {
+
+               document.getElementById("output").innerHTML = "";
+
+               return;
+
+            }
+
+        
+
+            if (window.XMLHttpRequest) {
+
+               xmlhttp = new XMLHttpRequest();
+
+            }else {
+
+               xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+            }
+
+            xmlhttp.onreadystatechange = function() {
+
+               if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+                  document.getElementById("output").innerHTML = xmlhttp.responseText;
+
+               }
+
+            }
+      
+            xmlhttp.open("GET","rss.php?q="+str,true);
+
+            xmlhttp.send();
+
+         }
+
+      </script>
+
+
     
     <style> 
      footer{
         text-align:center;
      }
     </style>
-      
-    <style> 
-       navigation{
-        text-align:left;
-        color:blue;
         
        
-       }
      </style>
      <img src="images/untitled.png" class="img-circle></img>
         
@@ -37,37 +74,142 @@
       <a class="navbar-brand" href="#">Brave</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="about.html">About us</a></li>
-      <li><a href="photo.html">Photos </a></li>
+      <li class="active"><a href="#">Home </a></li>
+      <li><a href="signup.html">About us </a></li>
+      <li><a href="video.html">videos </a></li>
       <li><a href="work.html"> Work</a></li>
+      <li><a href="indexDB.html">users</a> </li>
     </ul>
     
   </div>
 </nav>
-  
-   <nav>
-    <a href="about.html">about me </a>
-    
-    <a href="photo.html"> photos  </a>
-    
-    <a href="work.html"> colleague </a>
+ <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
+         <table cellspacing="2" cellpadding="2" border="1">
 
-  </nav>
-  <form>
-    Name: <input type="text"> <br/>
-    Email: <input type="text"> <br/>
-    password: <input type="text","number" <br/>
-    <button> Submit </button>
-</form>
-   <button type="button" class="btn btn-success">Success</button>
+            <tr>
+               <td align="right">Name</td>
+            <autofocus>
+               <td><input type="text" name="Name" /></td>
+            </autofocus>
+            </tr>
+            <tr>
+
+               <td align="right">EMail</td>
+
+               <td><input type="text" name="EMail" /></td>
+
+            </tr>
+            <tr>
+
+               <td align="right">Zip Code</td>
+
+               <td><input type="text" name="Zip" /></td>
+            </tr>
+            <tr>
+               <td align="right">Country</td>
+
+               <td>
+
+                  <select name="Country">
+
+                     <option value="-1" selected>[choose yours]</option>
+
+                     <option value="1">USA </option>
+
+                     <option value="2">UK </option>
+
+                     <option value="3">INDIA </option>
+                     <Option value="4">Other </Option>
+                  </select>
+
+               </td>
+
+            </tr>
+            <tr>
+               <td align="right"></td>
+               <td><input type="submit" value="Submit" /></td>
+            </tr>
+         </table>
+      </form>
+  <script type="text/javascript">
+
+         <!--
+
+            // Form validation code will come here.
+
+         //-->
+function validate()
+
+      {
+
+         if( document.myForm.Name.value == "" )
+
+         {
+
+            alert( "Please provide your name!" );
+
+            document.myForm.Name.focus() ;
+
+            return false;
+
+         }
+
+         if( document.myForm.EMail.value == "" )
+
+         {
+
+            alert( "Please provide your Email!" );
+
+            document.myForm.EMail.focus() ;
+
+            return false;
+
+         }
+
+         if( document.myForm.Zip.value == "" ||
+
+         isNaN( document.myForm.Zip.value ) ||
+
+         document.myForm.Zip.value.length != 5 )
+
+         {
+
+            alert( "Please provide a zip in the format #####." );
+
+            document.myForm.Zip.focus() ;
+
+            return false;
+
+         }
+
+        
+         if( document.myForm.Country.value == "-1" )
+
+         {
+
+            alert( "Please provide your country!" );
+
+            return false;
+
+         }
+
+         return( true );
+
+      }
+
+   //-->
+      </script>
+  
 </head>
 <body>
-   <div id="app">
-    <h3>Hello World</h3>
+    <label for="cont_file" class="item_7"> Contract File: </label> 
+    <input type="file" id="cont_file" name="cont_file" accept="image/*,.pdf,.jpeg,.doc,.docx"></input> 
+    <label for="it_con" class="item_8"> IT Contact: </label>
+     <input type="text" id="it_con" name="it_con" required></input>
 
     <div class="alert alert-primary" role="alert">
-        This is my portfolio website 
+        Welcome to Brave website 
+        <h1 onclick="this.innerHTML = 'Thanks!'">Click me!</h1>
     </div>
 
      <section class="container"
@@ -75,7 +217,7 @@
        <div class="half-width">
         <h1> Welcome to <span class="purple-color">Cliff's</span> world </h1>
   
-        <h3> Cliff's is providing best services in Digital marketing </h3>
+        <h4> Cliff's is providing best services in Digital marketing </h4>
         <p>my customers are the core in the business.Iam a Google analytics expert.I give my customers quality services </p>
        
          <h3> Web analysis for sites </h3>
@@ -113,8 +255,38 @@
        
        </div>   
      </section>
-     <script> var paymentsClient =
-    new google.payments.api.PaymentsClient({environment: 'TEST'});</script>
+     
+<p>Please Select an option to get RSS:</p>
+
+     <form>
+         <select onchange = "showRSS(this.value)">
+
+          <option value = "">Select an RSS-feed:</option>
+
+          <option value = "cnn">CNN </option>
+
+          <option value = "bbc">BBC News </option>
+
+          <option value = "pc">PC World </option>
+
+         </select>
+
+      </form>
+
+      </br>
+
+      <div id = "output">RSS-feeds </div>
+   <script> 
+     if(typeof(EventSource) !== "undefined") {
+    var source = new EventSource("demo_sse.php");
+    source.onmessage = function(event) {
+        document.getElementById("result").innerHTML += event.data + "<br>";
+    };
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+    </script>
+
      
 </body>
 <footer> Felix Production ©2020 </footer>

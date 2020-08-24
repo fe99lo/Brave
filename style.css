@@ -1,10 +1,16 @@
 purple-color{
     color: #8845f4;
 }
+head {
+     font-size:1.2em ;
+     color:green ;
+
+}
 body {
      font-family: sans-serif;
      color: #777777;
      line-height: 26px;
+     background-color:purple ;
 }
 .half-width{
     width: 50%;
