@@ -55,9 +55,8 @@
          }
 
       </script>
-
-
-    
+   
+    <a href="logout.php">Log in </a>
     <style> 
      footer{
         text-align:center;
@@ -77,11 +76,35 @@
       <li class="active"><a href="#">Home </a></li>
       <li><a href="signup.html">About us </a></li>
       <li><a href="video.html">videos </a></li>
-      <li><a href="work.html"> Work</a></li>
-      <li><a href="indexDB.html">users</a> </li>
+      <li><a href="register.php"> Work </a></li>
+      <li><a href="indexDB.html">users </a> </li>
+      <li><a href="php.ini">Files </a></li>
     </ul>
     
   </div>
+  <table>
+   <tr>
+    <td>Current Limit</td> <td>
+     <div id="newlimit" >100
+      </div>
+      </td>
+       </tr> <tr>
+        <td>Set New Limit</td> <td>
+        <input type="number" id="updatelimit">
+        </td> 
+        </tr> 
+        <tr> 
+        <td>
+       <button onclick="fupdatelimit()">Save
+       </button>
+       <td> 
+       </tr> <tr>
+        <td>Limit shown in RM </td> 
+        </tr> 
+   </table>
+   <script> 
+      function fupdatelimit() { var y = document.getElementById("updatelimit").value; newlimit.innerHTML= y; }
+    </script>
 </nav>
  <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
          <table cellspacing="2" cellpadding="2" border="1">

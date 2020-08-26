@@ -1,0 +1,31 @@
+CREATE TABLE `users` ( 
+
+2 
+
+`id` int(11) unsigned NOT NULL AUTO_INCREMENT, 
+
+3 
+
+`name` varchar(75) NOT NULL, 
+
+4 
+
+`password` varchar(255) NOT NULL, 
+
+5 
+
+`email` varchar(100) NOT NULL, 
+
+6 
+
+PRIMARY KEY (`id`), 
+
+7 
+
+UNIQUE KEY `email` (`email`) 
+
+8 
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1; 
+
+
