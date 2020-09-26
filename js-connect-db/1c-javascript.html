@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function getUsers() {
+        // APPEND FORM DATA
+        var data = new FormData();
+        data.append('req', 'get');
+
+        // AJAX CALL
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', "1b-database.php", true);
+        xhr.onload = function(){
+          console.log(this.response);
+        };
+        xhr.send(data);
+      }
+
+      function addUser() {
+        // APPEND FORM DATA
+        var data = new FormData();
+        data.append('req', 'add');
+        data.append('name', document.getElementById("user-name").value);
+
+        // AJAX CALL
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', "1b-database.php", true);
+        xhr.onload = function(){
+          console.log(this.response);
+        };
+        xhr.send(data);
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <!-- GET ALL USERS -->
+    <input type="button" value="Get Users" onclick="return getUsers()"/>
+
+    <!-- ADD USERS -->
+    <form onsubmit="return addUser();">
+      <input type="text" value="NAME HERE" id="user-name" required/>
+      <input type="submit" value="Add User"/>
+    </form>
+  </body>
+</html>

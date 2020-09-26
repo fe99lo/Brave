@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Brave</title>
+    <title>Jakana </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Felix Onkangi">
     <meta name="description" content="portfolio website">
-    <meta name="keywords" content="programming hero, web playground">
+    <meta name="keywords" content="Sharing, web navigation">
     <link rel="relax icon" href="images/relax.png" type="image/image png">
     <!--@bootstrapCss-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -15,19 +15,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="PHP" href="index.php">
     <script>  document.write(Date())  </script>
-    
+    <a href="map.html">Check places </a>
     <script>
-         function showRSS(str) {
-            if (str.length == 0) {
+       function showRSS(str) {
+           if (str.length == 0) {
 
                document.getElementById("output").innerHTML = "";
 
                return;
 
             }
-
-        
-
+       
             if (window.XMLHttpRequest) {
 
                xmlhttp = new XMLHttpRequest();
@@ -56,17 +54,19 @@
 
       </script>
    
-    <a href="logout.php">Log in </a>
+    <a href="indexDB.html">Log in </a>
+    <a href="signup.html">sign up <a>
     <style> 
      footer{
         text-align:center;
      }
     </style>
         
-       
-     </style>
-     <img src="images/untitled.png" class="img-circle></img>
-        
+     <script> sun.attr('r',20);
+     </script>  
+    
+     <img src="images/startup.png" alt="startup" 
+        style="width:204px;height:128px;"></img>
         <nav class="navbar navbar-inverse">
   <div class="container-fluid" >
     <div class="navbar-header">
@@ -74,164 +74,22 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home </a></li>
-      <li><a href="signup.html">About us </a></li>
+      <li><a href="about.html">About us </a></li>
       <li><a href="video.html">videos </a></li>
       <li><a href="register.php"> Work </a></li>
-      <li><a href="indexDB.html">users </a> </li>
-      <li><a href="php.ini">Files </a></li>
+      <li><a href="product.html">Products</a> </li>
+      <li><a href="file-upload.php">Files </a></li>
     </ul>
     
   </div>
-  <table>
-   <tr>
-    <td>Current Limit</td> <td>
-     <div id="newlimit" >100
-      </div>
-      </td>
-       </tr> <tr>
-        <td>Set New Limit</td> <td>
-        <input type="number" id="updatelimit">
-        </td> 
-        </tr> 
-        <tr> 
-        <td>
-       <button onclick="fupdatelimit()">Save
-       </button>
-       <td> 
-       </tr> <tr>
-        <td>Limit shown in RM </td> 
-        </tr> 
-   </table>
-   <script> 
-      function fupdatelimit() { var y = document.getElementById("updatelimit").value; newlimit.innerHTML= y; }
-    </script>
-</nav>
- <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
-         <table cellspacing="2" cellpadding="2" border="1">
-
-            <tr>
-               <td align="right">Name</td>
-            <autofocus>
-               <td><input type="text" name="Name" /></td>
-            </autofocus>
-            </tr>
-            <tr>
-
-               <td align="right">EMail</td>
-
-               <td><input type="text" name="EMail" /></td>
-
-            </tr>
-            <tr>
-
-               <td align="right">Zip Code</td>
-
-               <td><input type="text" name="Zip" /></td>
-            </tr>
-            <tr>
-               <td align="right">Country</td>
-
-               <td>
-
-                  <select name="Country">
-
-                     <option value="-1" selected>[choose yours]</option>
-
-                     <option value="1">USA </option>
-
-                     <option value="2">UK </option>
-
-                     <option value="3">INDIA </option>
-                     <Option value="4">Other </Option>
-                  </select>
-
-               </td>
-
-            </tr>
-            <tr>
-               <td align="right"></td>
-               <td><input type="submit" value="Submit" /></td>
-            </tr>
-         </table>
-      </form>
-  <script type="text/javascript">
-
-         <!--
-
-            // Form validation code will come here.
-
-         //-->
-function validate()
-
-      {
-
-         if( document.myForm.Name.value == "" )
-
-         {
-
-            alert( "Please provide your name!" );
-
-            document.myForm.Name.focus() ;
-
-            return false;
-
-         }
-
-         if( document.myForm.EMail.value == "" )
-
-         {
-
-            alert( "Please provide your Email!" );
-
-            document.myForm.EMail.focus() ;
-
-            return false;
-
-         }
-
-         if( document.myForm.Zip.value == "" ||
-
-         isNaN( document.myForm.Zip.value ) ||
-
-         document.myForm.Zip.value.length != 5 )
-
-         {
-
-            alert( "Please provide a zip in the format #####." );
-
-            document.myForm.Zip.focus() ;
-
-            return false;
-
-         }
-
-        
-         if( document.myForm.Country.value == "-1" )
-
-         {
-
-            alert( "Please provide your country!" );
-
-            return false;
-
-         }
-
-         return( true );
-
-      }
-
-   //-->
-      </script>
   
+    <a href="/shopping-cart.html">Shop </a>
 </head>
 <body>
-    <label for="cont_file" class="item_7"> Contract File: </label> 
-    <input type="file" id="cont_file" name="cont_file" accept="image/*,.pdf,.jpeg,.doc,.docx"></input> 
-    <label for="it_con" class="item_8"> IT Contact: </label>
-     <input type="text" id="it_con" name="it_con" required></input>
+    
 
     <div class="alert alert-primary" role="alert">
-        Welcome to Brave website 
+        Welcome to Brevity website 
         <h1 onclick="this.innerHTML = 'Thanks!'">Click me!</h1>
     </div>
 
@@ -251,13 +109,13 @@ function validate()
        </div>
 
       <div class="half-width">
-       <img src="images/relax.png" alt="">
+       <img src="images/relax.png" alt="design work" style="width:204px;height:128px;"></img>
       </div>
     </section>
     
     <section class="container"> 
       <div class="half-width">
-       <img class="side-img" src="images/meet.png">
+       <img src="images/meet.png" alt="" style="width:100px;height:78px;"></img>
       </div>
        <div class="half-width">
       
@@ -265,7 +123,7 @@ function validate()
         <h4> Become a web developer </h4>
         <p> To offer solutions to business owners.To make my clients relax as i do the great job of making your online presence profitable</p>
         
-        <a class="primary-btn" href=""> Email: onkangifelix33@gmail.com </a>
+       <a class="primary-btn" href="">Top </a>
         
       </div>
      </section>
@@ -279,12 +137,12 @@ function validate()
        </div>   
      </section>
      
-<p>Please Select an option to get RSS:</p>
+       <p>Please Select an option to get RSS:</p>
 
      <form>
-         <select onchange = "showRSS(this.value)">
+        <select onchange = "showRSS(this.value)">
 
-          <option value = "">Select an RSS-feed:</option>
+          <option value = "RSS">Select an RSS-feed:</option>
 
           <option value = "cnn">CNN </option>
 
@@ -295,22 +153,7 @@ function validate()
          </select>
 
       </form>
-
-      </br>
-
-      <div id = "output">RSS-feeds </div>
-   <script> 
-     if(typeof(EventSource) !== "undefined") {
-    var source = new EventSource("demo_sse.php");
-    source.onmessage = function(event) {
-        document.getElementById("result").innerHTML += event.data + "<br>";
-    };
-} else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
-}
-    </script>
-
-     
+     
 </body>
 <footer> Felix Production ©2020 </footer>
 </html>

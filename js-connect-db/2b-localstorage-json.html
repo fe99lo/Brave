@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // (1) DATA OBJECT
+      var user = {
+        name : "John Doe",
+        email : "john@doe.com",
+        gender : "Doe"
+      };
+
+      // (2) CONVERT JSON STRING
+      user = JSON.stringify(user);
+      console.log(user);
+
+      // (3) STORE IN LOCAL STORAGE
+      localStorage.setItem("User", user);
+
+      // (4) RETRIEVE - SIMPLY GET AND DECODE
+      user = localStorage.getItem("User");
+      user = JSON.parse(user);
+      console.log(user);
+    </script>
+  </head>
+  <body></body>
+</html>

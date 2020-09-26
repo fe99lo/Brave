@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // (1) SET - Save data into local storage
+      // In format of key => value
+      localStorage.setItem("Foo", "Bar");
+      localStorage.setItem("Hello", "World");
+
+      // (2) GET - Retrive data with given key
+      var data = localStorage.getItem("Foo");
+      console.log(data);
+      data = localStorage.getItem("Hello");
+      console.log(data);
+
+      // (3) REMOVE - Remove data with given key
+      localStorage.removeItem("Foo");
+      data = localStorage.getItem("Foo");
+      console.log(data);
+
+      // (4) CLEAR - Remove everything
+      localStorage.clear();
+    </script>
+  </head>
+  <body></body>
+</html>
